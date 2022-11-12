@@ -1,6 +1,7 @@
 import Header from "./sections/Header"
 import Home from "./pages/home";
 import Estudiante from "./pages/estudiante";
+import AboutUs from "./pages/aboutus";
 
 import "../styles/styles.scss"
 import { 
@@ -10,15 +11,15 @@ import {
 } from 'react-router-dom';
 
 const App = () => (
-    <><Header />
-      <BrowserRouter>
-        <Routes>
-        <Route path='/' element={<Home />} />
-        <Route  path= '/estudiante' element={<Estudiante />} />
-        </Routes>
-      </BrowserRouter>
-      
-      
+    <>
+        <BrowserRouter>
+          <Header />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route  path= '/estudiante' element={<Estudiante />} />
+            <Route path='/nosotros' element={<AboutUs />} />
+          </Routes>
+        </BrowserRouter>
     </>
   )
 

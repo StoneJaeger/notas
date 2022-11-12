@@ -2,9 +2,11 @@ const Home = () => (
     <div>
             <h1>Bienvenidos</h1>
         <form className="ed-container">
-            <label>Introduzca el número de carnet de identidad para la búsqueda</label>
-            <input className="text"></input>
-            <a className="Button">Buscar</a>
+            <div className="ed-item">
+                <label>Introduzca el número de carnet de identidad para la búsqueda</label>
+                <input className="text"></input>
+                <a className="button">Buscar</a>
+            </div>
         </form>
     </div>
 )
