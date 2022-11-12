@@ -1,6 +1,6 @@
 import Header from "./sections/Header"
 import Home from "./pages/home";
-import Estudiante from "./pages/estudiante";
+import Estudiantes from "./pages/estudiantes";
 import AboutUs from "./pages/aboutus";
 
 import "../styles/styles.scss"
@@ -16,7 +16,7 @@ const App = () => (
           <Header />
           <Routes>
             <Route path='/' element={<Home />} />
-            <Route  path= '/estudiante' element={<Estudiante />} />
+            <Route  path= '/estudiante' element={<Estudiantes />} />
             <Route path='/nosotros' element={<AboutUs />} />
           </Routes>
         </BrowserRouter>
