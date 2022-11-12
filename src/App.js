@@ -1,4 +1,4 @@
-
+import "./styles/styles.scss"
 
 const App = () => (
     <h1>Notas</h1>
