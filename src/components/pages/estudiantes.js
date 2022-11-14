@@ -16,17 +16,17 @@ const Estudiantes = () => {
             <h1>Notas del estudiante</h1>           
                 {
                     estudiantes ? (
-                     <section> 
+                     <section className="ed-grid s-grid-2 m-grid-3 lg-grid-4 row-gap"> 
                         {
                             estudiantes.map(({
-                                id, nombre, apellidos, matematica, español, historia
+                                id, nombre, apellidos, matematica, espanol, historia
                             }) => 
                             <Estudiante 
                             key={id}
                             nombre={nombre}
                             apellidos={apellidos}
                             matematica={matematica}
-                            español={español}
+                            espanol={espanol}
                             historia={historia}
                             />)
                         }

@@ -12,14 +12,14 @@ import {
 
 const App = () => (
     <>
-        <BrowserRouter>
-          <Header />
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route  path= '/estudiante' element={<Estudiantes />} />
-            <Route path='/nosotros' element={<AboutUs />} />
-          </Routes>
-        </BrowserRouter>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route  path= '/estudiante' element={<Estudiantes />} />
+          <Route path='/nosotros' element={<AboutUs />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 

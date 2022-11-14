@@ -1,5 +1,5 @@
 const Home = () => (
-    <div>
+    <div className="ed-grid">
             <h1>Bienvenidos</h1>
         <form className="ed-container">
             <div className="ed-item">
