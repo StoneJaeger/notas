@@ -19,12 +19,13 @@ const Estudiantes = () => {
                      <section className="ed-grid s-grid-2 m-grid-3 lg-grid-4 row-gap"> 
                         {
                             estudiantes.map(({
-                                id, nombre, apellidos, matematica, espanol, historia
+                                id, ci, nombre, apellidos, matematica, espanol, historia
                             }) => 
                             <Estudiante 
                             key={id}
                             nombre={nombre}
                             apellidos={apellidos}
+                            ci={ci}
                             matematica={matematica}
                             espanol={espanol}
                             historia={historia}
