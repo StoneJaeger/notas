@@ -1,2 +1,12 @@
 @import "~ed-grid";
 @import "~edteam-style-guides/edteam-style-guides";
+
+.table-responsive{
+padding:20px 40px;
+display: flex;
+justify-content: center;
+
+}
+table{
+    box-shadow: rgba(100,100,111,0.2) 0px 7px 20px 0px;
+}

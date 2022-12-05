@@ -9,6 +9,7 @@ const Header = () => (
           <nav className="main-menu" id="main-menu">
             <ul>
               <li><NavLink to="/" exact="true">Inicio</NavLink></li>
+              <li><NavLink to="/upload" exact="true">Subir archivo</NavLink></li>
               <li><NavLink to="/nosotros" exact="true">Nosotros</NavLink></li>
             </ul>
           </nav>

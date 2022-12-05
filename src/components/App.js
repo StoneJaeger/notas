@@ -2,6 +2,7 @@ import Header from "./sections/Header"
 import Home from "./pages/home";
 import Estudiantes from "./pages/estudiantes";
 import AboutUs from "./pages/aboutus";
+import Upload from "./pages/upload";
 
 import "../styles/styles.scss"
 import { 
@@ -17,6 +18,7 @@ const App = () => (
         <Routes>
           <Route path='/' element={<Home />} />
           <Route  path= '/estudiante' element={<Estudiantes />} />
+          <Route  path= '/upload' element={<Upload />} />
           <Route path='/nosotros' element={<AboutUs />} />
         </Routes>
       </BrowserRouter>

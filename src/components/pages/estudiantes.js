@@ -1,12 +1,15 @@
-import { useEffect, useState } from "react"
-import Estudiante from "../cards/Estudiante"
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import Estudiante from "../cards/Estudiante";
 
 const Estudiantes = () => {
 
-    const [estudiantes, setEstudiantes] = useState([])
+    const [estudiantes, setEstudiantes] = useState([]);
+    const search = useLocation();
 
     useEffect(() => {
-        fetch("http://localhost:3050/estudiantes")
+        console.log(search);
+        fetch(`http://localhost:3050/estudiantes?ci_like=${search.state}`)
         .then(response => response.json())
         .then(data => setEstudiantes(data))
     }, [])

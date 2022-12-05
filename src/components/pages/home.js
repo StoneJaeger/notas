@@ -1,18 +1,18 @@
 import {useEffect, useState} from 'react';
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
     const [estudiantes, setEstudiantes] = useState([]);
-    const [tablaEstudiantes, settablaEstudiantes] = useState([]);
+    const [tablaEstudiantes, setTablaEstudiantes] = useState([]);
     const [busqueda, setBusqueda] = useState("");
 
     const peticionGet = async() => {
         await axios.get("http://localhost:3050/estudiantes")
         .then(({data}) => {
-            setEstudiantes(data);
-            settablaEstudiantes(data);
+            setEstudiantes(data.estudiantes);
+            setTablaEstudiantes(data.estudiantes);
         }).catch(error => {
             console.log(error);
         })
@@ -21,7 +21,6 @@ const Home = () => {
     const handleChange = (e) => {
         setBusqueda(e.target.value);
         filtrar(e.target.value);
-        console.log("Búsqueda: "+ e.target.value);
     }
 
     const filtrar=(terminoBusqueda)=>{
@@ -38,6 +37,15 @@ const Home = () => {
         peticionGet();
     }, [])
 
+    const navigate = useNavigate();
+
+    const toDescription=()=>{
+        navigate(`/estudiante`,
+        {
+            state:busqueda
+        });
+    }
+
     return (
         <>
                 <div className="ed-grid">
@@ -49,9 +57,7 @@ const Home = () => {
                             value={busqueda}
                             onChange={handleChange}>
                             </input>
-                            <Link to="/estudiante">
-                                <a className="button">Buscar</a>
-                            </Link>                            
+                                <button className="button" onClick={toDescription}>Buscar</button>                           
                         </div>
                     </form>
                 </div>
